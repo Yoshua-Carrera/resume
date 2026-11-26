@@ -56,7 +56,8 @@
 // Header
 #align(center)[
   #text(size: 18pt, weight: "bold")[Yoshua Carrera Vargas] \
-  Irving, TX
+  #text(size: 11pt)[Senior Full-Stack Software Engineer] \
+  Irving, TX |
   #link("mailto:yoshua.carrera24@gmail.com")[yoshua.carrera24\@gmail.com] |
   #link("https://okaeri.dev/")[okaeri.dev] |
   #link("https://github.com/yoshua-Carrera")[github.com/yoshua-Carrera]
@@ -71,26 +72,24 @@ Kubernetes, Helm, and OpenShift. Runs a self-hosted NixOS / k3s infrastructure m
 Co-founding engineer of a platform that scaled from 6 to \~24 developers; M.S. in Applied Data Science.
 
 = Technical Skills
-- *Languages:* TypeScript, JavaScript (ES6+), Go, Python, SQL / PL/SQL, Nix, Bash, Lua, R, C++, HTML5, CSS / SCSS
-- *Backend & APIs:* TanStack Start (server functions), Next.js API routes, FastAPI, Go / Gin, Django, REST,
-  GraphQL / Apollo, Backend-for-Frontend (BFF), OAuth2, JWT, Drizzle ORM
+- *Languages:* TypeScript, JavaScript (ES6+), Go, Python, Elixir, SQL / PL/SQL, Nix, Bash, Lua, R, C++, HTML5,
+  CSS / SCSS
+- *Backend & APIs:* TanStack Start (server functions), Next.js API routes, Express, FastAPI, Go / Gin, gqlgen,
+  Phoenix / Absinthe, Django, REST, GraphQL / Apollo, Backend-for-Frontend (BFF), OAuth2, JWT, Drizzle ORM
 - *DevOps & Infrastructure:* Kubernetes, k3s, Helm, OpenShift, Docker, FluxCD (GitOps), NixOS / Nix Flakes,
   Home Manager, disko, sops-nix, systemd, MetalLB, ingress-nginx, cert-manager, CloudNativePG, Tailscale,
   Prometheus, Grafana, Harness, GitHub Actions, Jenkins, Netlify, Cloudflare R2, AWS (EC2, Elastic Beanstalk, RDS, Athena)
 - *Frontend:* React, Next.js, Angular (v9--20, Signals, RxJS, NgRx), Redux, TanStack Router / Query / Form, Tailwind CSS,
-  Micro-frontends, Module Federation (Webpack, Vite), Nx, Turborepo, Vite, Webpack, Storybook, Design Systems,
-  Ionic / Capacitor
-- *AI / ML:* Generative AI, LLMs, AI Assistants / Chatbots, TensorFlow, Keras, scikit-learn, OpenCV, Pandas, NumPy
-- *Testing:* Vitest, Jest, Storybook, Karma, Jasmine, Cucumber, Postman, Insomnia
+  Micro-frontends, Module Federation (Webpack, Vite), Nx, Turborepo, Storybook, Design Systems, Ionic / Capacitor
+- *AI & Testing:* Generative AI, LLMs, AI Assistants / Chatbots; Vitest, Jest
 - *Databases:* PostgreSQL (Neon), MongoDB / Atlas, Oracle, MySQL, MS SQL Server, SSIS / Data Warehousing
-- *Practices:* Agile / Scrum, System Architecture, Performance Optimization, Code Review, Mentoring, Developer Tooling
-  (Neovim, LSP), Jira, Figma
+- *Practices:* System Architecture, Performance Optimization, Code Review, Mentoring
 
 = Experience
 
 #job[Citi][Assistant Vice President -- Senior Software Engineer][Irving, TX][Sep 2025 -- Present]
-Converted from contractor to full-time employee and promoted to AVP, continuing as a lead frontend engineer across Citi's
-risk, controls, and AI automation platforms.
+Converted from contractor to full-time employee and promoted to AVP, continuing as a lead engineer across Citi's risk,
+controls, and AI automation platforms, owning frontend architecture and Kubernetes / Helm deployments.
 
 #project[OET / OEM][Testing & monitoring platform, OMAI organization][Jun 2026 -- Present]
 - Co-founding engineer of a greenfield web application where users document monitoring and testing execution efforts,
@@ -103,7 +102,7 @@ risk, controls, and AI automation platforms.
   messaging between frameworks.
 - Authored all Kubernetes manifests and Helm charts for the project, including horizontal pod autoscaling, secrets
   management, and environment-specific configuration; monitor, debug, and roll out deployments on OpenShift.
-- Integrated with Java Spring Boot backend microservices.
+- Integrated the frontend with Java Spring Boot backend microservices through their REST APIs.
 
 #project[MCA][Enterprise risk & controls management platform][Sep 2025 -- Jun 2026]
 - Replaced a monolithic iframe-based integration with Webpack Module Federation, serving remote entries for every
@@ -182,6 +181,18 @@ Self-taught; every machine, user, and service is declared in a single Nix flake.
 - GitOps pipeline: a systemd unit syncs Nix-rendered manifests to Cloudflare R2, which FluxCD reconciles, with
   Discord alerts; GitHub Actions runs `nix flake check` on every PR.
 - Writes postmortems and runbooks for incidents, including ext4 root corruption and a failed unstable-channel migration.
+
+#block(
+  above: 10pt,
+  below: 0.6em,
+  sticky: true,
+)[*Mock API Server* | Personal |
+  #link("https://github.com/yoshua-Carrera/mock-api")[github.com/yoshua-Carrera/mock-api]
+  #h(1fr) Nov 2024 -- Present]
+- File-driven mock server for REST and GraphQL: requests map to JSON fixtures by method and path or by operation name,
+  with header-selected scenarios, simulated latency, and stateful response sequences for polling flows.
+- Same spec implemented in TypeScript (Express), Go (gqlgen), and Elixir (Phoenix / Absinthe), with CI checks on the
+  Express and Go servers.
 
 = Education
 - *Fairfield University* | Master of Science, Applied Data Science | Fairfield, CT #h(1fr) 2022
